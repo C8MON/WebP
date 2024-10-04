@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>실습6번</title>
+        <script>
+        function trip(){
+            let a = prompt("HTML 텍스트 혹은 그냥 텍스트를 입력하세요.");
+            let b = document.getElementById("trv");
+            b.innerHTML = a;
+        }
+        </script>
+    </head>
+    <body>
+        <h3>innerHTML</h3>
+        <hr>
+        <p id="trv" onclick="trip()">이번 여름에는 어디로 여행을 갈까요?</p>
+    </body>
+</html>
