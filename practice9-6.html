@@ -6,13 +6,13 @@
     <script>
         var size=100;
         function wheel(a){
-            if(a.wheelDelta<0){
+            if (a.wheelDelta<0){
                 size=size+(size*0.05);
                 if(size<0){
                     size=0;
                 }
             }
-            else{
+            else {
                 size=size-(size*0.05);
             }
             document.getElementById("img").style.width=size+"px";
