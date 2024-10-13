@@ -1,87 +1,87 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>실습문제 9-10</title>
-    <style>
-        #txt {
-            width: 375px;
-        }
-        table {
-            text-align: center;
-            border: hidden;
-        }
-        td {
-            width: 70px;
-            padding-left: 20px;
-        }
-        input {
-            width: 90%;
-        }
-    </style>
-    <script>
-        var exp = "";
-
-        function inp(text) {
-            exp += text;
-            document.getElementById("txt").value = exp;
-        }
-
-        function enter() {
-            document.getElementById("txt").value = eval(exp);
-        }
-
-        function del() {
-            document.getElementById("txt").value = "";
-            exp = "";
-        }
-
-        function back()
-        {
-            length = document.getElementById("txt").value.length;
-            document.getElementById("txt").value = document.getElementById("txt").value.substring(0, length - 1);
-            exp = document.getElementById("txt").value.toString();
-            document.getElementById("txt").value = exp;
-        }
-    </script>
-</head>
-<body>
-    <h3>계산기 만들기</h3>
-    <hr>
-    <form>
-        <input id="txt" type="text" value="0">
-        <br>
-        <table>
-            <tr>
-                <td><input type="button" value="BACK" onclick="back()"></td>
-                <td><input type="button" value="CE" onclick="del()"></td>
-                <td><input type="button" value="C" onclick="del()"></td>
-                <td><input type="button" value="=" onclick="enter()"></td>
-            </tr>
-                <td><input type="button" value="7" onclick="inp('7')"></td>
-                <td><input type="button" value="8" onclick="inp('8')"></td>
-                <td><input type="button" value="9" onclick="inp('9')"></td>
-                <td><input type="button" value="/" onclick="inp('/')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="4" onclick="inp('4')"></td>
-                <td><input type="button" value="5" onclick="inp('5')"></td>
-                <td><input type="button" value="6" onclick="inp('6')"></td>
-                <td><input type="button" value="*" onclick="inp('*')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="1" onclick="inp('1')"></td>
-                <td><input type="button" value="2" onclick="inp('2')"></td>
-                <td><input type="button" value="3" onclick="inp('3')"></td>
-                <td><input type="button" value="-" onclick="inp('-')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="0" onclick="inp('0')"></td>
-                <td><input type="button" value="+" onclick="inp('+')"></td>
-                <td><input type="button" value="NONE"></td>
-                <td><input type="button" value="NONE"></td>
-            </tr>
-        </table>
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>실습문제 9-10</title>
+        <style>
+            #txt {
+                width: 375px;
+            }
+            table {
+                text-align: center;
+                border: hidden;
+            }
+            td {
+                width: 70px;
+                padding-left: 20px;
+            }
+            input {
+                width: 90%;
+            }
+        </style>
+        <script>
+            var exp = "";
+    
+            function inp(text) {
+                exp += text;
+                document.getElementById("txt").value = exp;
+            }
+    
+            function enter() {
+                document.getElementById("txt").value = eval(exp);
+            }
+    
+            function del() {
+                document.getElementById("txt").value = "";
+                exp = "";
+            }
+    
+            function back()
+            {
+                length = document.getElementById("txt").value.length;
+                document.getElementById("txt").value = document.getElementById("txt").value.substring(0, length - 1);
+                exp = document.getElementById("txt").value.toString();
+                document.getElementById("txt").value = exp;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>계산기 만들기</h3>
+        <hr>
+        <form>
+            <input id="txt" type="text" value="0">
+            <br>
+            <table>
+                <tr>
+                    <td><input type="button" value="BACK" onclick="back()"></td>
+                    <td><input type="button" value="CE" onclick="del()"></td>
+                    <td><input type="button" value="C" onclick="del()"></td>
+                    <td><input type="button" value="=" onclick="enter()"></td>
+                </tr>
+                    <td><input type="button" value="7" onclick="inp('7')"></td>
+                    <td><input type="button" value="8" onclick="inp('8')"></td>
+                    <td><input type="button" value="9" onclick="inp('9')"></td>
+                    <td><input type="button" value="/" onclick="inp('/')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" onclick="inp('4')"></td>
+                    <td><input type="button" value="5" onclick="inp('5')"></td>
+                    <td><input type="button" value="6" onclick="inp('6')"></td>
+                    <td><input type="button" value="*" onclick="inp('*')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" onclick="inp('1')"></td>
+                    <td><input type="button" value="2" onclick="inp('2')"></td>
+                    <td><input type="button" value="3" onclick="inp('3')"></td>
+                    <td><input type="button" value="-" onclick="inp('-')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="0" onclick="inp('0')"></td>
+                    <td><input type="button" value="+" onclick="inp('+')"></td>
+                    <td><input type="button" value="NONE"></td>
+                    <td><input type="button" value="NONE"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
 </html>
